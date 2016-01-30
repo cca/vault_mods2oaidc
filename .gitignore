@@ -1,2 +1,3 @@
 *.xml
 *.dc
+!sample.xml

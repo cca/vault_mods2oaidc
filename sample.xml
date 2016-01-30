@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xml>
+  <mods>
+    <relatedItem type="host">
+      <title>CCA/C Archives</title>
+    </relatedItem>
+    <physicalDescription>
+      <formBroad>painting</formBroad>
+      <formSpecific>mural painting</formSpecific>
+      <digitalOrigin>digitized after analog</digitalOrigin>
+      <extent>3 photographs; digital</extent>
+      <internetMediaType>image/jpeg</internetMediaType>
+      <internetMediaType>image/jpeg</internetMediaType>
+      <internetMediaType>image/jpeg</internetMediaType>
+    </physicalDescription>
+    <language authority="iso639-2b">eng</language>
+    <accessCondition type="use and reproduction">For rights relating to this resource, contact the CCA Libraries.</accessCondition>
+    <recordInfo>
+      <recordContentSource authority="oclc">cc9</recordContentSource>
+      <recordIdentifier>08d79b0c-392a-412b-8f1e-a15f710a0d38</recordIdentifier>
+      <languageOfCataloging>
+        <languageTerm authority="iso639-2b">eng</languageTerm>
+      </languageOfCataloging>
+      <recordCreationDate encoding="w3cdtf"/>
+    </recordInfo>
+    <titleInfo type="descriptive" usage="primary">
+      <title>CCAC off-campus Mural at Willard Junior High School, 1987</title>
+      <subTitle/>
+      <partName/>
+      <partNumber/>
+    </titleInfo>
+    <origininfo>
+      <dateType>dateCreated</dateType>
+      <dateCreatedWrapper>
+        <dateCreated encoding="w3cdtf" keyDate="yes" qualifier="approximate">1987</dateCreated>
+        <pointStart/>
+        <pointEnd/>
+      </dateCreatedWrapper>
+    </origininfo>
+    <typeOfResourceWrapper>
+      <typeOfResource>still image</typeOfResource>
+    </typeOfResourceWrapper>
+    <location>
+      <physicalLocation>Born Digital</physicalLocation>
+      <copyInformation>
+        <sublocationDetail/>
+        <shelfLocator/>
+      </copyInformation>
+    </location>
+    <part>
+      <title>Mural detail, showing date completed and the names of muralists</title>
+      <number>7ee07201-f752-4c86-8aa7-777c45d27634</number>
+      <date/>
+      <extent/>
+      <text>Mural detail, showing date completed and the names of muralists</text>
+    </part>
+    <part>
+      <title>Long view, showing the entire mural</title>
+      <number>bb1ba040-174a-456a-92aa-02b9a4af9775</number>
+      <date/>
+      <extent/>
+      <text>Long view, showing the entire mural</text>
+    </part>
+    <part>
+      <title>Mural detail, girl reading quote </title>
+      <number>732b78fa-1e6b-440c-9cf4-1772cb1efb81</number>
+      <date/>
+      <extent/>
+      <text>Mural detail, girl reading quote </text>
+    </part>
+    <name authority="lc" type="personal" usage="primary">
+      <namePart>Montoya, Malaquias</namePart>
+      <namePartDate>1938-</namePartDate>
+      <subNameWrapper>
+        <ccaAffiliated>Yes</ccaAffiliated>
+        <affiliation>CCAC</affiliation>
+        <constituent>Faculty</constituent>
+        <gradDate>1978-1989</gradDate>
+        <description>Faculty in the Ethnic Studies and Printmaking Departments. Directed the creation of this CCAC student executed mural in 1987.</description>
+      </subNameWrapper>
+    </name>
+    <name authority="local" type="personal" usage="secondary">
+      <namePart>Newton, Bill</namePart>
+      <namePartDate/>
+      <role>
+        <roleTerm>photographer</roleTerm>
+      </role>
+      <subNameWrapper>
+        <gradDate/>
+        <description>© Bill Newton</description>
+      </subNameWrapper>
+    </name>
+    <originInfo>
+      <place/>
+      <publisher/>
+      <edition/>
+    </originInfo>
+    <physicalDescriptionNote>
+      <note/>
+    </physicalDescriptionNote>
+    <genreWrapper>
+      <genre/>
+    </genreWrapper>
+    <subject>
+      <subjectType>temporal</subjectType>
+      <temporal>1980-1989</temporal>
+    </subject>
+    <subject>
+      <subjectType>geographic</subjectType>
+      <geographic authority="none">CCAC off-campus mural</geographic>
+    </subject>
+    <photoClassification authority="local">Work by students</photoClassification>
+    <artstorClassification authority="artstor">photographs</artstorClassification>
+    <abstract>CCAC student executed mural, created in 1987 under the direction of CCAC faculty Malaquias Montoya at Willard Junior High 2425 Stewart, Berkeley, CA. Photographed by Bill Newton. </abstract>
+    <tableOfContents/>
+    <noteWrapper>
+      <note/>
+    </noteWrapper>
+    <relateditem>
+      <title/>
+      <location/>
+      <note/>
+    </relateditem>
+  </mods>
+  <local>
+    <archivesWrapper>
+      <series>VI. Photographs</series>
+      <seriesStaging>VI. Photographs</seriesStaging>
+    </archivesWrapper>
+    <retention>999</retention>
+    <subjectName/>
+    <usageRequestWrapper>
+      <usageRequest>Digital image donated by CCA faculty, Eduardo Pineda, with permission of the photographer, Bill Newton, for addition to the digital repository.</usageRequest>
+    </usageRequestWrapper>
+    <viewLevel>public</viewLevel>
+  </local>
+  <item id="08d79b0c-392a-412b-8f1e-a15f710a0d38" itemdefid="6b755832-4070-73d2-77b3-3febcc1f5fad" itemstatus="live" key="7246115" moderating="false" version="1">
+    <attachments>
+      <attachment type="local">
+        <conversion>false</conversion>
+        <size>120713</size>
+        <uuid>7ee07201-f752-4c86-8aa7-777c45d27634</uuid>
+        <file>Willard_mural_1.jpg</file>
+        <description>Willard_mural_1.jpg</description>
+        <thumbnail>_THUMBS/Willard_mural_1.jpg.jpeg</thumbnail>
+        <attributes/>
+      </attachment>
+      <attachment type="local">
+        <conversion>false</conversion>
+        <size>106594</size>
+        <uuid>bb1ba040-174a-456a-92aa-02b9a4af9775</uuid>
+        <file>Willard_mural_2.jpg</file>
+        <description>Willard_mural_2.jpg</description>
+        <thumbnail>_THUMBS/Willard_mural_2.jpg.jpeg</thumbnail>
+        <attributes/>
+      </attachment>
+      <attachment type="local">
+        <conversion>false</conversion>
+        <size>101254</size>
+        <uuid>732b78fa-1e6b-440c-9cf4-1772cb1efb81</uuid>
+        <file>Willard_mural_3.jpg</file>
+        <description>Willard_mural_3.jpg</description>
+        <thumbnail>_THUMBS/Willard_mural_3.jpg.jpeg</thumbnail>
+        <attributes/>
+      </attachment>
+    </attachments>
+    <staging/>
+    <name>CCAC off-campus Mural at Willard Junior High School, 1987</name>
+    <description>CCAC student executed mural, created in 1987 under the direction of CCAC faculty Malaquias Montoya at Willard Junior High 2425 Stewart, Berkeley, CA. Photographed by Bill Newton. </description>
+    <newitem>false</newitem>
+    <thumbnail>default</thumbnail>
+    <owner>jscarboro<user id="jscarboro"><username>jscarboro</username><givenname>Jennine</givenname><surname>Scarboro</surname><email>jscarboro@cca.edu</email></user></owner>
+    <datecreated>2015-09-16T10:16:29-0700</datecreated>
+    <datemodified>2016-01-28T14:25:05-0800</datemodified>
+    <dateforindex>2016-01-28T14:25:05-0800</dateforindex>
+  </item>
+  <template>entity/1454442/displaytemplate/</template>
+  <itemdir>/items/08d79b0c-392a-412b-8f1e-a15f710a0d38/1/</itemdir>
+  <collection>Libraries</collection>
+</xml>
