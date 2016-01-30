@@ -4,6 +4,8 @@ An XSLT stylesheet for converting from our (highly localized) MODS schema to the
 
 VAULT OAI feed URL for the "Libraries" collection: https://vault.cca.edu/oai?verb=ListRecords&metadataPrefix=oai_dc&set=6b755832-4070-73d2-77b3-3febcc1f5fad
 
+You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the provided "convert.sh" script. An example MODS document from the Libraries collection is provided.
+
 ## Application
 
 - open the VAULT admin console https://vault.cca.edu/jnlp/admin.jnlp
@@ -13,4 +15,5 @@ VAULT OAI feed URL for the "Libraries" collection: https://vault.cca.edu/oai?ver
 
 ## Notes & Links
 
-- [MODS to Dubline Core Mapping](http://www.loc.gov/standards/mods/mods-dcsimple.html) by LoC
+- [MODS to Dublin Core Mapping](http://www.loc.gov/standards/mods/mods-dcsimple.html) by LoC
+- [VAULT Schema](https://github.com/cca/vault_schema)
