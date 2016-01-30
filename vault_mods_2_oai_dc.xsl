@@ -1,23 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
+    <xsl:output method="xml" indent="yes" />
+    <xsl:template match="/xml">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+
             <dc:title>
-                <xsl:value-of select="/xml/mods/titleInfo/title"/>
+                <xsl:value-of select="mods/titleInfo/title"/>
             </dc:title>
+
+            <!-- @TODO note & tableOfContents also map here -->
             <dc:description>
-                <xsl:value-of select="/xml/mods/abstract" />
+                <xsl:value-of select="mods/abstract" />
             </dc:description>
+
             <dc:identifier>
-                <!-- question: include version in identifier? -->
-                <xsl:value-of select="/xml/item/@id" />/<xsl:value-of select="/xml/item/@version" />
+                <!-- question: include version in identifier? use URL? -->
+                <xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />
             </dc:identifier>
+            <!-- @TODO if we don't have dateCreated, what about another date?
+            DC only has one date field for all -->
             <dc:date>
-                <xsl:value-of select="/xml/mods/origininfo/dateCreatedWrapper/dateCreated" />
+                <xsl:value-of select="mods/origininfo/dateCreatedWrapper/dateCreated" />
             </dc:date>
-            <!-- @TODO dc:creator -->
-            <!-- @TODO what else can be added?
-            see http://www.loc.gov/standards/mods/mods-dcsimple.html -->
+
+            <!-- @TODO is this the best way to separate creator from contributor? -->
+            <xsl:for-each select="mods/name[@usage='primary']">
+                <dc:creator>
+                    <xsl:value-of select="namePart" />
+                </dc:creator>
+            </xsl:for-each>
+            <xsl:for-each select="mods/name[@usage='secondary']">
+                <dc:contributor>
+                    <xsl:value-of select="namePart" />
+                </dc:contributor>
+            </xsl:for-each>
+
+            <!-- @TODO MODS subject name/topic/occupation => dc:subject -->
+
+            <dc:publisher>
+                <xsl:value-of select="mods/originInfo/publisher" />
+            </dc:publisher>
+
+            <!-- typeOfResource & genre are collapsed in DC
+
+            @TODO should be convert to DC terms for type? a choose/when/otherwise
+            block would be the way to accomplish this, see
+            http://www.w3schools.com/xsl/xsl_choose.asp -->
+            <xsl:for-each select="mods/typeOfResourceWrapper">
+                <dc:type>
+                    <xsl:value-of select="typeOfResource" />
+                </dc:type>
+            </xsl:for-each>
+
+            <xsl:for-each select="mods/genreWrapper">
+                <dc:type>
+                    <xsl:value-of select="genre" />
+                </dc:type>
+            </xsl:for-each>
+
+            <!-- regardless of the physicalDescription child node, put it in format -->
+            <xsl:for-each select="mods/physicalDescription/*">
+                <dc:format>
+                    <xsl:value-of select="text()" />
+                </dc:format>
+            </xsl:for-each>
+
+            <dc:language>
+                <xsl:value-of select="mods/language" />
+            </dc:language>
+
+            <!-- @TODO MODS subject geographic/temporal/cartographic => dc:coverage -->
+
+            <dc:rights>
+                <xsl:value-of select="mods/accessCondition" />
+            </dc:rights>
         </oai_dc:dc>
     </xsl:template>
 </xsl:transform>
