@@ -55,21 +55,25 @@
                 <xsl:value-of select="mods/originInfo/publisher" />
             </dc:publisher>
 
-            <!-- typeOfResource & genre are collapsed in DC
+            <!-- typeOfResource & genre collapse to dc:type
 
             @TODO should be convert to DC terms for type? a choose/when/otherwise
             block would be the way to accomplish this, see
             http://www.w3schools.com/xsl/xsl_choose.asp -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
-                <dc:type>
-                    <xsl:value-of select="typeOfResource" />
-                </dc:type>
+                <xsl:for-each select="typeOfResource">
+                    <dc:type>
+                        <xsl:value-of select="text()" />
+                    </dc:type>
+                </xsl:for-each>
             </xsl:for-each>
 
             <xsl:for-each select="mods/genreWrapper">
-                <dc:type>
-                    <xsl:value-of select="genre" />
-                </dc:type>
+                <xsl:for-each select="genre">
+                    <dc:type>
+                        <xsl:value-of select="text()" />
+                    </dc:type>
+                </xsl:for-each>
             </xsl:for-each>
 
             <!-- regardless of the physicalDescription child node, put it in format -->
