@@ -35,7 +35,21 @@
                 </dc:contributor>
             </xsl:for-each>
 
-            <!-- @TODO MODS subject name/topic/occupation => dc:subject -->
+            <!-- MODS subject/name & subject/topic => dc:subject
+            we don't use subject/occupation -->
+            <xsl:for-each select="mods/subject">
+                <xsl:for-each select="name">
+                    <dc:subject>
+                        <xsl:value-of select="text()" />
+                    </dc:subject>
+                </xsl:for-each>
+
+                <xsl:for-each select="topic">
+                    <dc:subject>
+                        <xsl:value-of select="text()" />
+                    </dc:subject>
+                </xsl:for-each>
+            </xsl:for-each>
 
             <dc:publisher>
                 <xsl:value-of select="mods/originInfo/publisher" />
@@ -69,7 +83,21 @@
                 <xsl:value-of select="mods/language" />
             </dc:language>
 
-            <!-- @TODO MODS subject geographic/temporal/cartographic => dc:coverage -->
+            <!-- MODS subject/geographic & subject/temporal => dc:coverage
+            & we don't use cartographics or hierarchicalGeographic -->
+            <xsl:for-each select="mods/subject">
+                <xsl:for-each select="temporal">
+                    <dc:coverage>
+                        <xsl:value-of select="text()" />
+                    </dc:coverage>
+                </xsl:for-each>
+
+                <xsl:for-each select="geographic">
+                    <dc:coverage>
+                        <xsl:value-of select="text()" />
+                    </dc:coverage>
+                </xsl:for-each>
+            </xsl:for-each>
 
             <dc:rights>
                 <xsl:value-of select="mods/accessCondition" />
