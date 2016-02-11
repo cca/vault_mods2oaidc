@@ -81,9 +81,12 @@
                 </xsl:for-each>
             </xsl:for-each>
 
-            <dc:publisher>
-                <xsl:value-of select="mods/originInfo/publisher" />
-            </dc:publisher>
+            <!-- Libraries collection -->
+            <xsl:if test="mods/originInfo/publisher">
+                <dc:publisher>
+                    <xsl:value-of select="mods/originInfo/publisher" />
+                </dc:publisher>
+            </xsl:if>
 
             <!-- typeOfResource & genre collapse to dc:type
 
@@ -113,9 +116,11 @@
                 </dc:format>
             </xsl:for-each>
 
-            <dc:language>
-                <xsl:value-of select="mods/language" />
-            </dc:language>
+            <xsl:if test="mods/language">
+                <dc:language>
+                    <xsl:value-of select="mods/language" />
+                </dc:language>
+            </xsl:if>
 
             <!-- MODS subject/geographic & subject/temporal => dc:coverage
             & we don't use cartographics or hierarchicalGeographic -->
@@ -133,9 +138,12 @@
                 </xsl:for-each>
             </xsl:for-each>
 
-            <dc:rights>
-                <xsl:value-of select="mods/accessCondition" />
-            </dc:rights>
+            <xsl:if test="mods/accessCondition">
+                <dc:rights>
+                    <xsl:value-of select="mods/accessCondition" />
+                </dc:rights>
+            </xsl:if>
+
         </oai_dc:dc>
     </xsl:template>
 </xsl:transform>
