@@ -35,6 +35,20 @@
                 </dc:contributor>
             </xsl:for-each>
 
+            <!-- for Faculty Research collection, which follows MODS more closely -->
+            <xsl:for-each select="mods/name">
+                <xsl:if test="contains(role/roleTerm, 'author')">
+                    <dc:creator>
+                        <xsl:value-of select="namePart" />
+                    </dc:creator>
+                </xsl:if>
+                <xsl:if test="contains(role/roleTerm, 'editor')">
+                    <dc:contributor>
+                        <xsl:value-of select="namePart" />
+                    </dc:contributor>
+                </xsl:if>
+            </xsl:for-each>
+
             <!-- MODS subject/name & subject/topic => dc:subject
             we don't use subject/occupation -->
             <xsl:for-each select="mods/subject">
