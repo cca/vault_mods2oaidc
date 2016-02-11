@@ -87,6 +87,13 @@
                     <xsl:value-of select="mods/originInfo/publisher" />
                 </dc:publisher>
             </xsl:if>
+            <!-- Faculty Research, this is actually the journal/book
+            which is not so great, but it's as close as we can get -->
+            <xsl:if test="mods/relatedItem/title">
+                <dc:publisher>
+                    <xsl:value-of select="mods/relatedItem/title" />
+                </dc:publisher>
+            </xsl:if>
 
             <!-- typeOfResource & genre collapse to dc:type
 
