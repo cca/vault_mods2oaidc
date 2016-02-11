@@ -35,8 +35,8 @@
     <typeOfResourceWrapper>
       <typeOfResource>text</typeOfResource>
     </typeOfResourceWrapper>
-    <language authority="iso639-2b"/>
-    <accessCondition type="use and reproduction"/>
+    <language authority="iso639-2b">eng</language>
+    <accessCondition type="use and reproduction">For rights relating to this resource, contact the copyright holder (typicall either the publisher or author).</accessCondition>
     <recordInfo>
       <recordContentSource authority="oclc">cc9</recordContentSource>
       <recordIdentifier>439a3ea3-7a3c-4f4f-9a4e-fddd83ca2f5f</recordIdentifier>
