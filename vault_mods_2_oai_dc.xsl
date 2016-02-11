@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="xml" indent="yes" />
+    <!-- NOTE: we cannot start at /xml/mods because we use certain pieces of the
+    /xml/item system-generated metadata -->
     <xsl:template match="/xml">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 
@@ -19,9 +21,18 @@
             </dc:identifier>
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
-            <dc:date>
-                <xsl:value-of select="mods/origininfo/dateCreatedWrapper/dateCreated" />
-            </dc:date>
+            <!-- Libraries collection -->
+            <xsl:if test="mods/origininfo/dateCreatedWrapper/dateCreated">
+                <dc:date>
+                    <xsl:value-of select="mods/origininfo/dateCreatedWrapper/dateCreated" />
+                </dc:date>
+            </xsl:if>
+            <!-- Faculty Research -->
+            <xsl:if test="mods/relatedItem/part/date">
+                <dc:date>
+                    <xsl:value-of select="mods/relatedItem/part/date" />
+                </dc:date>
+            </xsl:if>
 
             <!-- @TODO is this the best way to separate creator from contributor? -->
             <xsl:for-each select="mods/name[@usage='primary']">
