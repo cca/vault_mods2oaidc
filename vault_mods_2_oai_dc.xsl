@@ -6,19 +6,24 @@
     <xsl:template match="/xml">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 
-            <dc:title>
-                <xsl:value-of select="mods/titleInfo/title"/>
-            </dc:title>
+            <xsl:if test="mods/titleInfo/title">
+                <dc:title>
+                    <xsl:value-of select="mods/titleInfo/title"/>
+                </dc:title>
+            </xsl:if>
 
             <!-- @TODO note & tableOfContents also map here -->
-            <dc:description>
-                <xsl:value-of select="mods/abstract" />
-            </dc:description>
+            <xsl:if test="mods/abstract">
+                <dc:description>
+                    <xsl:value-of select="mods/abstract" />
+                </dc:description>
+            </xsl:if>
 
             <dc:identifier>
                 <!-- question: include version in identifier? use URL? -->
                 <xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />
             </dc:identifier>
+
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
             <!-- Libraries collection -->
