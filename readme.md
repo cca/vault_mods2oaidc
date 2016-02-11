@@ -4,7 +4,7 @@ An XSLT stylesheet for converting from our (highly localized) MODS schema to the
 
 VAULT OAI feed URL for the "Libraries" collection: https://vault.cca.edu/oai?verb=ListRecords&metadataPrefix=oai_dc&set=6b755832-4070-73d2-77b3-3febcc1f5fad
 
-You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the provided "convert.sh" script. An example MODS document from the Libraries collection is provided.
+You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the provided "convert.sh" script. Example MODS documents from the Libraries and Faculty Research collections are provided.
 
 ## Application
 

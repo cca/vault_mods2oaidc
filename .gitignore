@@ -1,3 +1,4 @@
 *.xml
 *.dc
 !sample.xml
+!faculty-research.xml

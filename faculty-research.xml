@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<xml>
+  <mods>
+    <genreWrapper>
+      <genre>journal article</genre>
+    </genreWrapper>
+    <titleInfo>
+      <title>Hardening the Browser: Protecting Patron Privacy on the Internet</title>
+    </titleInfo>
+    <relatedItem type="host">
+      <part>
+        <date>2012</date>
+        <detail type="volume">
+          <caption>vol.</caption>
+          <number>51</number>
+        </detail>
+        <detail type="number">
+          <caption>no.</caption>
+          <number>3</number>
+        </detail>
+        <extent unit="page">
+          <start>210</start>
+          <end>214</end>
+        </extent>
+      </part>
+      <title>Reference &amp; User Services Quarterly</title>
+      <identifier type="issn">1094-9054</identifier>
+    </relatedItem>
+    <part>
+      <number>b26a15f3-de14-4137-8bed-eb88d7bf72b9</number>
+      <numberC>51</numberC>
+      <numberD>3</numberD>
+      <numberB>210-214</numberB>
+    </part>
+    <typeOfResourceWrapper>
+      <typeOfResource>text</typeOfResource>
+    </typeOfResourceWrapper>
+    <language authority="iso639-2b"/>
+    <accessCondition type="use and reproduction"/>
+    <recordInfo>
+      <recordContentSource authority="oclc">cc9</recordContentSource>
+      <recordIdentifier>439a3ea3-7a3c-4f4f-9a4e-fddd83ca2f5f</recordIdentifier>
+    </recordInfo>
+    <name>
+      <namePart>Eric Phetteplace</namePart>
+      <role>
+        <roleTerm>author</roleTerm>
+      </role>
+    </name>
+    <name>
+      <namePart>M Kathleen Kern</namePart>
+      <role>
+        <roleTerm>editor</roleTerm>
+      </role>
+    </name>
+    <abstract>As more and more time is spent accessing and producing content online, libraries need to
+position themselves to offer Internet privacy to patrons as well. This column details how to
+secure the web browser, from choosing state-of-the-art software to strong default settings to
+using add-ons to extend the capabilities of the browser.</abstract>
+  </mods>
+  <item id="439a3ea3-7a3c-4f4f-9a4e-fddd83ca2f5f" itemdefid="e96ccf65-0098-44bb-bec0-6e1cd5466046" itemstatus="live" key="7344098" moderating="false" version="5">
+    <attachments>
+      <attachment type="local">
+        <conversion>false</conversion>
+        <size>117560</size>
+        <uuid>b26a15f3-de14-4137-8bed-eb88d7bf72b9</uuid>
+        <file>Hardening-the-Browser.pdf</file>
+        <description>Hardening-the-Browser.pdf</description>
+        <thumbnail>_THUMBS/Hardening-the-Browser.pdf.jpeg</thumbnail>
+        <attributes/>
+      </attachment>
+    </attachments>
+    <name>Hardening the Browser: Protecting Patron Privacy on the Internet</name>
+    <description>As more and more time is spent accessing and producing content online, libraries need to position themselves to offer Internet privacy to patrons as well. This column details how to secure the web browser, from choosing state-of-the-art software to strong default settings to using add-ons to extend the capabilities of the browser.</description>
+    <newitem>false</newitem>
+    <thumbnail>default</thumbnail>
+    <owner>13dc7262-16f0-4b6b-b648-be73d2b7d15f<user id="13dc7262-16f0-4b6b-b648-be73d2b7d15f"><username>eric1</username><givenname>Eric</givenname><surname>Phetteplace</surname><email>ephetteplace@cca.edu</email></user></owner>
+    <datecreated>2015-10-15T16:10:40-0700</datecreated>
+    <datemodified>2015-10-15T16:15:48-0700</datemodified>
+    <dateforindex>2016-02-02T16:36:52-0800</dateforindex>
+  </item>
+  <template>entity/7339182/displaytemplate/</template>
+  <itemdir>/items/439a3ea3-7a3c-4f4f-9a4e-fddd83ca2f5f/5/</itemdir>
+  <collection>Faculty Research</collection>
+</xml>
