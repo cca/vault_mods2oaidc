@@ -41,14 +41,18 @@
 
             <!-- @TODO is this the best way to separate creator from contributor? -->
             <xsl:for-each select="mods/name[@usage='primary']">
-                <dc:creator>
-                    <xsl:value-of select="namePart" />
-                </dc:creator>
+                <xsl:if test="namePart != ''">
+                    <dc:creator>
+                        <xsl:value-of select="namePart" />
+                    </dc:creator>
+                </xsl:if>
             </xsl:for-each>
             <xsl:for-each select="mods/name[@usage='secondary']">
-                <dc:contributor>
-                    <xsl:value-of select="namePart" />
-                </dc:contributor>
+                <xsl:if test="namePart != ''">
+                    <dc:contributor>
+                        <xsl:value-of select="namePart" />
+                    </dc:contributor>
+                </xsl:if>
             </xsl:for-each>
 
             <!-- for Faculty Research collection, which follows MODS more closely -->
