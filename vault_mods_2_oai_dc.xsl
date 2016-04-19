@@ -20,8 +20,8 @@
             </xsl:if>
 
             <dc:identifier>
-                <!-- question: include version in identifier? use URL? -->
-                <xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />
+                <!-- use item's URL, seems to be best practice -->
+                https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />/
             </dc:identifier>
 
             <!-- @TODO if we don't have dateCreated, what about another date?
