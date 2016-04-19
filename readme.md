@@ -17,3 +17,4 @@ You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the pro
 
 - [MODS to Dublin Core Mapping](http://www.loc.gov/standards/mods/mods-dcsimple.html) by LoC
 - [VAULT Schema](https://github.com/cca/vault_schema)
+- [USC's ContentDM OAI feed](http://digitallibrary.usc.edu/oai/oai.php?verb=ListSets) (good example)
