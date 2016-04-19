@@ -6,14 +6,14 @@
     <xsl:template match="/xml">
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 
-            <xsl:if test="mods/titleInfo/title">
+            <xsl:if test="mods/titleInfo/title != ''">
                 <dc:title>
                     <xsl:value-of select="mods/titleInfo/title"/>
                 </dc:title>
             </xsl:if>
 
             <!-- @TODO note & tableOfContents also map here -->
-            <xsl:if test="mods/abstract">
+            <xsl:if test="mods/abstract != ''">
                 <dc:description>
                     <xsl:value-of select="mods/abstract" />
                 </dc:description>
@@ -27,13 +27,13 @@
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
             <!-- Libraries collection -->
-            <xsl:if test="mods/origininfo/dateCreatedWrapper/dateCreated">
+            <xsl:if test="mods/origininfo/dateCreatedWrapper/dateCreated != ''">
                 <dc:date>
                     <xsl:value-of select="mods/origininfo/dateCreatedWrapper/dateCreated" />
                 </dc:date>
             </xsl:if>
             <!-- Faculty Research -->
-            <xsl:if test="mods/relatedItem/part/date">
+            <xsl:if test="mods/relatedItem/part/date != ''">
                 <dc:date>
                     <xsl:value-of select="mods/relatedItem/part/date" />
                 </dc:date>
@@ -82,14 +82,14 @@
             </xsl:for-each>
 
             <!-- Libraries collection -->
-            <xsl:if test="mods/originInfo/publisher">
+            <xsl:if test="mods/originInfo/publisher != ''">
                 <dc:publisher>
                     <xsl:value-of select="mods/originInfo/publisher" />
                 </dc:publisher>
             </xsl:if>
             <!-- Faculty Research, this is actually the journal/book
             which is not so great, but it's as close as we can get -->
-            <xsl:if test="mods/relatedItem/title">
+            <xsl:if test="mods/relatedItem/title != ''">
                 <dc:publisher>
                     <xsl:value-of select="mods/relatedItem/title" />
                 </dc:publisher>
@@ -102,17 +102,21 @@
             http://www.w3schools.com/xsl/xsl_choose.asp -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
                 <xsl:for-each select="typeOfResource">
-                    <dc:type>
-                        <xsl:value-of select="text()" />
-                    </dc:type>
+                    <xsl:if test="text() != ''">
+                        <dc:type>
+                            <xsl:value-of select="text()" />
+                        </dc:type>
+                    </xsl:if>
                 </xsl:for-each>
             </xsl:for-each>
 
             <xsl:for-each select="mods/genreWrapper">
                 <xsl:for-each select="genre">
-                    <dc:type>
-                        <xsl:value-of select="text()" />
-                    </dc:type>
+                    <xsl:if test="text() != ''">
+                        <dc:type>
+                            <xsl:value-of select="text()" />
+                        </dc:type>
+                    </xsl:if>
                 </xsl:for-each>
             </xsl:for-each>
 
@@ -123,7 +127,7 @@
                 </dc:format>
             </xsl:for-each>
 
-            <xsl:if test="mods/language">
+            <xsl:if test="mods/language != ''">
                 <dc:language>
                     <xsl:value-of select="mods/language" />
                 </dc:language>
@@ -145,7 +149,7 @@
                 </xsl:for-each>
             </xsl:for-each>
 
-            <xsl:if test="mods/accessCondition">
+            <xsl:if test="mods/accessCondition != ''">
                 <dc:rights>
                     <xsl:value-of select="mods/accessCondition" />
                 </dc:rights>
