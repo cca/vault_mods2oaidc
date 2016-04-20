@@ -111,18 +111,46 @@
                 </dc:publisher>
             </xsl:if>
 
-            <!-- typeOfResource & genre collapse to dc:type
+            <!-- typeOfResource maps to dc:type
 
-            @TODO should be convert to DC terms for type? a choose/when/otherwise
-            block would be the way to accomplish this, see
-            http://www.w3schools.com/xsl/xsl_choose.asp -->
+            We convert our vocabulary to DCMI Type terms, see
+            https://sites.google.com/a/cca.edu/libraries/home/vault/calisphere-dcmi-types -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
                 <xsl:for-each select="typeOfResource">
-                    <xsl:if test="text() != ''">
-                        <dc:type>
-                            <xsl:value-of select="text()" />
-                        </dc:type>
-                    </xsl:if>
+                    <!-- caching text in variable makes this faster -->
+                    <xsl:variable name="text" select="text()" />
+                    <xsl:choose>
+                        <xsl:when test="$text = 'cartographic'">
+                            <dc:type>Image</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'notated music'">
+                            <dc:type>Image</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'mixed material'">
+                            <dc:type>Image</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'moving image'">
+                            <dc:type>MovingImage</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'software, multimedia'">
+                            <dc:type>Software</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'still image'">
+                            <dc:type>Image</dc:type>
+                        </xsl:when>
+                        <!-- this cover 3 values:
+                        sound recording, sound recording-musical, sound recording-nonmusical -->
+                        <xsl:when test="starts-with($text, 'sound recording')">
+                            <dc:type>Sound</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'text'">
+                            <dc:type>Text</dc:type>
+                        </xsl:when>
+                        <xsl:when test="$text = 'three dimensional object'">
+                            <dc:type>Image</dc:type>
+                        </xsl:when>
+                        <!-- we do not supply an xsl:otherwise fallback -->
+                    </xsl:choose>
                 </xsl:for-each>
             </xsl:for-each>
 
