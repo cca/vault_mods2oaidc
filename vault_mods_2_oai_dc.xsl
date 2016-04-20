@@ -83,6 +83,20 @@
                 </xsl:for-each>
             </xsl:for-each>
 
+            <!-- we also map mods/genreWrapper/genre to subject
+            so that we can reserve dc:type (where genre would normally go)
+            for DCMI Type terms to comply with Calisphere standards
+            -->
+            <xsl:for-each select="mods/genreWrapper">
+                <xsl:for-each select="genre">
+                    <xsl:if test="text() != ''">
+                        <dc:subject>
+                            <xsl:value-of select="text()" />
+                        </dc:subject>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:for-each>
+
             <!-- Libraries collection -->
             <xsl:if test="mods/originInfo/publisher != ''">
                 <dc:publisher>
@@ -104,16 +118,6 @@
             http://www.w3schools.com/xsl/xsl_choose.asp -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
                 <xsl:for-each select="typeOfResource">
-                    <xsl:if test="text() != ''">
-                        <dc:type>
-                            <xsl:value-of select="text()" />
-                        </dc:type>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:for-each>
-
-            <xsl:for-each select="mods/genreWrapper">
-                <xsl:for-each select="genre">
                     <xsl:if test="text() != ''">
                         <dc:type>
                             <xsl:value-of select="text()" />
