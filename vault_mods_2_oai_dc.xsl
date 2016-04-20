@@ -19,10 +19,8 @@
                 </dc:description>
             </xsl:if>
 
-            <dc:identifier>
-                <!-- use item's URL, seems to be best practice -->
-                https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />/
-            </dc:identifier>
+            <!-- use item's URL, seems to be best practice -->
+            <dc:identifier>https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />/</dc:identifier>
 
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
