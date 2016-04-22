@@ -19,8 +19,9 @@
                 </dc:description>
             </xsl:if>
 
-            <!-- use item's URL, seems to be best practice -->
-            <dc:identifier>https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/<xsl:value-of select="item/@version" />/</dc:identifier>
+            <!-- use item's URL as identifier, seems to be best practice
+            magical EQUELLA hack: version 0 redirects to latest live version -->
+            <dc:identifier>https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/0/</dc:identifier>
 
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
