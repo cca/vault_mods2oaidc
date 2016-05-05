@@ -157,9 +157,11 @@
 
             <!-- regardless of the physicalDescription child node, put it in format -->
             <xsl:for-each select="mods/physicalDescription/*">
-                <dc:format>
-                    <xsl:value-of select="text()" />
-                </dc:format>
+                <xsl:if test="text () != ''">
+                    <dc:format>
+                        <xsl:value-of select="text()" />
+                    </dc:format>
+                </xsl:if>
             </xsl:for-each>
 
             <xsl:if test="mods/language != ''">
