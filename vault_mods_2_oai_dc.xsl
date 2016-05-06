@@ -4,7 +4,8 @@
     <!-- NOTE: we cannot start at /xml/mods because we use certain pieces of the
     /xml/item system-generated metadata -->
     <xsl:template match="/xml">
-        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 
             <xsl:if test="mods/titleInfo/title != ''">
                 <dc:title>
@@ -21,7 +22,11 @@
 
             <!-- use item's URL as identifier, seems to be best practice
             magical EQUELLA hack: version 0 redirects to latest live version -->
-            <dc:identifier>https://vault.cca.edu/items/<xsl:value-of select="item/@id" />/0/</dc:identifier>
+            <dc:identifier>
+                <xsl:text>https://vault.cca.edu/items/</xsl:text>
+                <xsl:value-of select="item/@id" />
+                <xsl:text>/0/</xsl:text>
+            </dc:identifier>
 
             <!-- @TODO if we don't have dateCreated, what about another date?
             DC only has one date field for all -->
@@ -185,6 +190,53 @@
                     </dc:coverage>
                 </xsl:for-each>
             </xsl:for-each>
+
+            <!--
+            for Faculty Research collection
+            must expose the host publication, especially for inclusion in Worldcat
+            Libraries collection also uses relatedItem[type=host]
+            so we need to check for an ISSN or ISBN -->
+            <xsl:for-each select="mods/relatedItem[@type='host']">
+                <dcterms:isPartOf>
+                    <xsl:text>urn:ISSN:</xsl:text>
+                    <xsl:value-of select="identifier" />
+                </dcterms:isPartOf>
+                <!-- fully formatted citation along the lines of
+                Library and Information Science Research 22(3), 311-338. (2000)
+                for some reason xsl:text is necessary to make the 1st space appear-->
+                <dcterms:bibliographicCitation>
+                    <xsl:value-of select="title" />
+                        <xsl:text> </xsl:text>
+                        <xsl:if test="part/detail[@type='volume']/number != ''">
+                            <xsl:value-of select="part/detail[@type='volume']/number" />
+                        </xsl:if>
+                        <xsl:if test="part/detail[@type='number']/number != ''">
+                            <xsl:text>(</xsl:text>
+                            <xsl:value-of select="part/detail[@type='number']/number" />
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>
+                        <xsl:text>, </xsl:text>
+                        <xsl:if test="part/extent/start != ''">
+                            <xsl:value-of select="part/extent/start" />
+                        </xsl:if>
+                        <xsl:if test="part/extent/end != ''">
+                            <xsl:text>-</xsl:text><xsl:value-of select="part/extent/end" />
+                        </xsl:if>
+                        <xsl:text>. </xsl:text>
+                        <xsl:if test="part/date != ''">
+                            <xsl:text>(</xsl:text>
+                            <xsl:value-of select="part/date" />
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>
+                </dcterms:bibliographicCitation>
+            </xsl:for-each>
+            <!-- similar but for book chapters with associated ISBNs -->
+            <xsl:if test="mods/relatedItem[@type='host']/identifier/@type = 'isbn'">
+                <dcterms:isPartOf>
+                    <xsl:text>urn:ISBN:</xsl:text>
+                    <xsl:value-of select="mods/relatedItem[@type='host']/identifier" />
+                </dcterms:isPartOf>
+            </xsl:if>
 
             <xsl:if test="mods/accessCondition != ''">
                 <dc:rights>
