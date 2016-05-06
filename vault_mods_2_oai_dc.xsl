@@ -109,16 +109,8 @@
                     <xsl:value-of select="mods/originInfo/publisher" />
                 </dc:publisher>
             </xsl:if>
-            <!-- Faculty Research, this is actually the journal/book
-            which is not so great, but it's as close as we can get -->
-            <xsl:if test="mods/relatedItem/title != ''">
-                <dc:publisher>
-                    <xsl:value-of select="mods/relatedItem/title" />
-                </dc:publisher>
-            </xsl:if>
 
             <!-- typeOfResource maps to dc:type
-
             We convert our vocabulary to DCMI Type terms, see
             https://sites.google.com/a/cca.edu/libraries/home/vault/calisphere-dcmi-types -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
