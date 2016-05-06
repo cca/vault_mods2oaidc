@@ -2,7 +2,8 @@
 
 An XSLT stylesheet for converting from our (highly localized) MODS schema to the Dublin Core values that OAI-PMH expects, so that we can expose VAULT metadata publicly in a more consumable manner than the default configuration.
 
-VAULT OAI feed URL for the "Libraries" collection: https://vault.cca.edu/oai?verb=ListRecords&metadataPrefix=oai_dc&set=6b755832-4070-73d2-77b3-3febcc1f5fad
+ - [OAI feed for the "Libraries" collection](https://vault.cca.edu/oai?verb=ListRecords&metadataPrefix=oai_dc&set=6b755832-4070-73d2-77b3-3febcc1f5fad)
+ - [OAI feed for the "Faculty Research" collection](https://vault.cca.edu/oai?verb=ListRecords&metadataPrefix=oai_dc&set=e96ccf65-0098-44bb-bec0-6e1cd5466046)
 
 You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the provided "convert.sh" script. Example MODS documents from the Libraries and Faculty Research collections are provided.
 
