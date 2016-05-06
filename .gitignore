@@ -1,4 +1,5 @@
 *.xml
 *.dc
-!sample.xml
-!faculty-research.xml
+!libraries.xml
+!article.xml
+!book-chapter.xml
