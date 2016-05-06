@@ -190,10 +190,12 @@
             so we need to check for an ISSN or ISBN -->
             <xsl:for-each select="mods/relatedItem[@type='host']">
                 <xsl:if test="identifier/@type = 'issn'">
-                    <dcterms:isPartOf>
-                        <xsl:text>urn:ISSN:</xsl:text>
-                        <xsl:value-of select="identifier" />
-                    </dcterms:isPartOf>
+                    <xsl:if test="identifier != ''">
+                        <dcterms:isPartOf>
+                            <xsl:text>urn:ISSN:</xsl:text>
+                            <xsl:value-of select="identifier" />
+                        </dcterms:isPartOf>
+                    </xsl:if>
                     <!-- fully formatted citation along the lines of
                     Library and Information Science Research 22(3), 311-338. (2000)
                     for some reason xsl:text is necessary to make the 1st space appear-->
@@ -225,7 +227,7 @@
                 </xsl:if>
 
                 <!-- similar but for book chapters with associated ISBNs -->
-                <xsl:if test="identifier/@type = 'isbn'">
+                <xsl:if test="identifier/@type = 'isbn' and identifier !=''">
                     <dcterms:isPartOf>
                         <xsl:text>urn:ISBN:</xsl:text>
                         <xsl:value-of select="mods/relatedItem[@type='host']/identifier" />
