@@ -200,26 +200,38 @@
                     Library and Information Science Research 22(3), 311-338. (2000)
                     for some reason xsl:text is necessary to make the 1st space appear-->
                     <dcterms:bibliographicCitation>
+                        <!-- we'll always have at least a title -->
                         <xsl:value-of select="title" />
-                        <xsl:text> </xsl:text>
-                        <xsl:if test="part/detail[@type='volume']/number != ''">
-                            <xsl:value-of select="part/detail[@type='volume']/number" />
+
+                        <xsl:variable name="volume" select="part/detail[@type='volume']/number" />
+                        <xsl:if test="$volume != ''">
+                            <xsl:text> </xsl:text>
+                            <xsl:value-of select="$volume" />
                         </xsl:if>
+
                         <xsl:if test="part/detail[@type='number']/number != ''">
                             <xsl:text>(</xsl:text>
                             <xsl:value-of select="part/detail[@type='number']/number" />
                             <xsl:text>)</xsl:text>
                         </xsl:if>
-                        <xsl:text>, </xsl:text>
-                        <xsl:if test="part/extent/start != ''">
-                            <xsl:value-of select="part/extent/start" />
+
+                        <!-- only show comma if we have at least volume & start pg -->
+                        <xsl:variable name="start" select="part/extent/start" />
+                        <xsl:if test="$volume != '' and $start != ''">
+                            <xsl:text>, </xsl:text>
                         </xsl:if>
+                        <xsl:if test="$start != ''">
+                            <xsl:value-of select="$start" />
+                        </xsl:if>
+
                         <xsl:if test="part/extent/end != ''">
                             <xsl:text>-</xsl:text><xsl:value-of select="part/extent/end" />
                         </xsl:if>
-                        <xsl:text>. </xsl:text>
+
+                        <xsl:text>.</xsl:text>
+
                         <xsl:if test="part/date != ''">
-                            <xsl:text>(</xsl:text>
+                            <xsl:text> (</xsl:text>
                             <xsl:value-of select="part/date" />
                             <xsl:text>)</xsl:text>
                         </xsl:if>
@@ -230,7 +242,7 @@
                 <xsl:if test="identifier/@type = 'isbn' and identifier !=''">
                     <dcterms:isPartOf>
                         <xsl:text>urn:ISBN:</xsl:text>
-                        <xsl:value-of select="mods/relatedItem[@type='host']/identifier" />
+                        <xsl:value-of select="identifier" />
                     </dcterms:isPartOf>
                 </xsl:if>
             </xsl:for-each>
