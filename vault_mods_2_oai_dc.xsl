@@ -197,15 +197,16 @@
             Libraries collection also uses relatedItem[type=host]
             so we need to check for an ISSN or ISBN -->
             <xsl:for-each select="mods/relatedItem[@type='host']">
-                <dcterms:isPartOf>
-                    <xsl:text>urn:ISSN:</xsl:text>
-                    <xsl:value-of select="identifier" />
-                </dcterms:isPartOf>
-                <!-- fully formatted citation along the lines of
-                Library and Information Science Research 22(3), 311-338. (2000)
-                for some reason xsl:text is necessary to make the 1st space appear-->
-                <dcterms:bibliographicCitation>
-                    <xsl:value-of select="title" />
+                <xsl:if test="identifier/@type = 'issn'">
+                    <dcterms:isPartOf>
+                        <xsl:text>urn:ISSN:</xsl:text>
+                        <xsl:value-of select="identifier" />
+                    </dcterms:isPartOf>
+                    <!-- fully formatted citation along the lines of
+                    Library and Information Science Research 22(3), 311-338. (2000)
+                    for some reason xsl:text is necessary to make the 1st space appear-->
+                    <dcterms:bibliographicCitation>
+                        <xsl:value-of select="title" />
                         <xsl:text> </xsl:text>
                         <xsl:if test="part/detail[@type='volume']/number != ''">
                             <xsl:value-of select="part/detail[@type='volume']/number" />
@@ -228,15 +229,17 @@
                             <xsl:value-of select="part/date" />
                             <xsl:text>)</xsl:text>
                         </xsl:if>
-                </dcterms:bibliographicCitation>
+                    </dcterms:bibliographicCitation>
+                </xsl:if>
+
+                <!-- similar but for book chapters with associated ISBNs -->
+                <xsl:if test="identifier/@type = 'isbn'">
+                    <dcterms:isPartOf>
+                        <xsl:text>urn:ISBN:</xsl:text>
+                        <xsl:value-of select="mods/relatedItem[@type='host']/identifier" />
+                    </dcterms:isPartOf>
+                </xsl:if>
             </xsl:for-each>
-            <!-- similar but for book chapters with associated ISBNs -->
-            <xsl:if test="mods/relatedItem[@type='host']/identifier/@type = 'isbn'">
-                <dcterms:isPartOf>
-                    <xsl:text>urn:ISBN:</xsl:text>
-                    <xsl:value-of select="mods/relatedItem[@type='host']/identifier" />
-                </dcterms:isPartOf>
-            </xsl:if>
 
             <xsl:if test="mods/accessCondition != ''">
                 <dc:rights>
