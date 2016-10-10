@@ -273,6 +273,12 @@
                 </xsl:if>
             </xsl:for-each>
 
+            <xsl:for-each select="local/department">
+                <dc:subject>
+                    <xsl:value-of select="text()" />
+                </dc:subject>
+            </xsl:for-each>
+
             <xsl:if test="mods/accessCondition != ''">
                 <dc:rights>
                     <xsl:value-of select="mods/accessCondition" />
