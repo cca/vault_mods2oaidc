@@ -152,9 +152,27 @@
                 </xsl:for-each>
             </xsl:for-each>
 
+            <!-- specifically for Communications collection
+            which sets local/communicationsWrapper/submissionType to one of
+            press image, publication, or document -->
+            <xsl:if test="local/communicationsWrapper/submissionType != ''">
+                <xsl:variable name="type" select="local/communicationsWrapper/submissionType" />
+                <xsl:choose>
+                    <xsl:when test="$type = 'document'">
+                        <dc:type>Text</dc:type>
+                    </xsl:when>
+                    <xsl:when test="$type = 'press image'">
+                        <dc:type>Image</dc:type>
+                    </xsl:when>
+                    <xsl:when test="$type = 'publication'">
+                        <dc:type>Text</dc:type>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:if>
+
             <!-- regardless of the physicalDescription child node, put it in format -->
             <xsl:for-each select="mods/physicalDescription/*">
-                <xsl:if test="text () != ''">
+                <xsl:if test="text() != ''">
                     <dc:format>
                         <xsl:value-of select="text()" />
                     </dc:format>
