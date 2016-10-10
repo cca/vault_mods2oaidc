@@ -157,7 +157,7 @@
             press image, publication, or document -->
             <xsl:for-each select="local/communicationsWrapper">
                 <xsl:if test="submissionType != ''">
-                    <xsl:variable name="type" select="local/communicationsWrapper/submissionType" />
+                    <xsl:variable name="type" select="submissionType" />
                     <xsl:choose>
                         <xsl:when test="$type = 'document'">
                             <dc:type>Text</dc:type>
