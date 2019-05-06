@@ -1,2 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xml><mods><genreWrapper><genre>book chapter</genre></genreWrapper><titleInfo><title>Hong Kong television in Chinatown: translocal context(s) and transnational social formations</title></titleInfo><relatedItem type="host"><part><date>2007</date><extent unit="page"><start>63</start><end>76</end></extent></part><title>Hong Kong Film, Hollywood and the New Global China</title><identifier type="isbn">9780415380683</identifier></relatedItem><part><number>54d01bcc-4142-4231-951b-ef24428e2942</number><numberB>63-76</numberB></part><typeOfResourceWrapper><typeOfResource>text</typeOfResource></typeOfResourceWrapper><language authority="iso639-2b">eng</language><accessCondition type="use and reproduction">For rights relating to this resource, contact the copyright holder (typically either the publisher or author).</accessCondition><recordInfo><recordContentSource authority="oclc">cc9</recordContentSource><recordIdentifier>f627f71d-94c6-4dfa-810a-759316335f2a</recordIdentifier></recordInfo><name><namePart>Amy Lee</namePart><role><roleTerm>author</roleTerm></role></name><abstract/></mods><item id="f627f71d-94c6-4dfa-810a-759316335f2a" itemdefid="e96ccf65-0098-44bb-bec0-6e1cd5466046" itemstatus="live" key="7440444" moderating="false" version="1"><attachments><attachment type="local"><conversion>false</conversion><size>1321476</size><uuid>54d01bcc-4142-4231-951b-ef24428e2942</uuid><file>HKTVinCTN.pdf</file><description>HKTVinCTN.pdf</description><thumbnail>_THUMBS/HKTVinCTN.pdf.jpeg</thumbnail><attributes/></attachment></attachments><staging/><name>Hong Kong television in Chinatown: translocal context(s) and transnational social formations</name><newitem>false</newitem><thumbnail>default</thumbnail><owner>alee8<user id="alee8"><username>alee8</username><givenname>Amy</givenname><surname>Lee</surname><email>alee8@cca.edu</email></user></owner><datecreated>2015-11-27T01:38:21-0800</datecreated><datemodified>2015-11-30T09:53:10-0800</datemodified><dateforindex>2016-04-22T15:09:34-0700</dateforindex><rating average="-1.0"/><badurls/><history><contributed applies="false" date="2015-11-27T01:38:21-0800" state="draft" user="alee8">alee8</contributed><edit applies="false" date="2015-11-27T01:38:21-0800" state="draft" user="alee8">alee8</edit><statechange applies="false" date="2015-11-27T01:38:21-0800" state="live" user="alee8">alee8</statechange><edit applies="false" date="2015-11-30T09:53:10-0800" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit></history><moderation><liveapprovaldate>2015-11-27T01:38:21-0800</liveapprovaldate></moderation><navigationNodes/></item><template>entity/7339182/displaytemplate/</template><itemdir>/items/f627f71d-94c6-4dfa-810a-759316335f2a/1/</itemdir><sessionparams/><collection>Faculty Research</collection></xml>
+<xml>
+    <mods>
+        <genreWrapper>
+            <genre>book chapter</genre>
+        </genreWrapper>
+        <titleInfo>
+            <title>Hong Kong television in Chinatown: translocal context(s) and transnational social formations</title>
+        </titleInfo>
+        <relatedItem type="host">
+            <part>
+                <date>2007</date>
+                <extent unit="page">
+                    <start>63</start>
+                    <end>76</end>
+                </extent>
+            </part>
+            <title>Hong Kong Film, Hollywood and the New Global China</title>
+            <identifier type="isbn">9780415380683</identifier>
+        </relatedItem>
+        <part>
+            <number>54d01bcc-4142-4231-951b-ef24428e2942</number>
+            <numberB>63-76</numberB>
+        </part>
+        <typeOfResourceWrapper>
+            <typeOfResource>text</typeOfResource>
+        </typeOfResourceWrapper>
+        <language authority="iso639-2b">eng</language>
+        <accessCondition type="use and reproduction">For rights relating to this resource, contact the copyright holder (typically either the publisher or author).</accessCondition>
+        <recordInfo>
+            <recordContentSource authority="oclc">cc9</recordContentSource>
+            <recordIdentifier>f627f71d-94c6-4dfa-810a-759316335f2a</recordIdentifier>
+        </recordInfo>
+        <name>
+            <namePart>Amy Lee</namePart>
+            <role>
+                <roleTerm>author</roleTerm>
+            </role>
+        </name>
+        <abstract/>
+    </mods>
+    <item id="f627f71d-94c6-4dfa-810a-759316335f2a" itemdefid="e96ccf65-0098-44bb-bec0-6e1cd5466046" itemstatus="live" key="7440444" moderating="false" version="1">
+        <attachments>
+            <attachment type="local">
+                <conversion>false</conversion>
+                <size>1321476</size>
+                <uuid>54d01bcc-4142-4231-951b-ef24428e2942</uuid>
+                <file>HKTVinCTN.pdf</file>
+                <description>HKTVinCTN.pdf</description>
+                <thumbnail>_THUMBS/HKTVinCTN.pdf.jpeg</thumbnail>
+                <attributes/>
+            </attachment>
+        </attachments>
+        <staging/>
+        <name>Hong Kong television in Chinatown: translocal context(s) and transnational social formations</name>
+        <newitem>false</newitem>
+        <thumbnail>default</thumbnail>
+        <owner>alee8
+            <user id="alee8">
+                <username>alee8</username>
+                <givenname>Amy</givenname>
+                <surname>Lee</surname>
+                <email>alee8@cca.edu</email>
+            </user>
+        </owner>
+        <datecreated>2015-11-27T01:38:21-0800</datecreated>
+        <datemodified>2015-11-30T09:53:10-0800</datemodified>
+        <dateforindex>2016-04-22T15:09:34-0700</dateforindex>
+        <rating average="-1.0"/>
+        <badurls/>
+        <history>
+            <contributed applies="false" date="2015-11-27T01:38:21-0800" state="draft" user="alee8">alee8</contributed>
+            <edit applies="false" date="2015-11-27T01:38:21-0800" state="draft" user="alee8">alee8</edit>
+            <statechange applies="false" date="2015-11-27T01:38:21-0800" state="live" user="alee8">alee8</statechange>
+            <edit applies="false" date="2015-11-30T09:53:10-0800" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit>
+        </history>
+        <moderation>
+            <liveapprovaldate>2015-11-27T01:38:21-0800</liveapprovaldate>
+        </moderation>
+        <navigationNodes/>
+    </item>
+    <template>entity/7339182/displaytemplate/</template>
+    <itemdir>/items/f627f71d-94c6-4dfa-810a-759316335f2a/1/</itemdir>
+    <sessionparams/>
+    <collection>Faculty Research</collection>
+</xml>
