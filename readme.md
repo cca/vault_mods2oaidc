@@ -16,7 +16,7 @@ You can test out this XSLT on Mac OS X using the builtin `xsltproc` with the pro
 
 ## Notes & Links
 
-- [Metadata Harvesting Scheme and Crosswalk - Calisphere](https://registry.cdlib.org/documentation/docs/registry/metadata-harvest.1.html)
+- [Metadata Harvesting Scheme and Crosswalk - Calisphere](https://help.oac.cdlib.org/support/solutions/articles/9000088362-calisphere-metadata-requirements-and-scheme)
 - [DCMI Types mapping](https://sites.google.com/a/cca.edu/libraries/home/vault/calisphere-dcmi-types) (libraries' private wiki)
 - [MODS to Dublin Core Mapping](http://www.loc.gov/standards/mods/mods-dcsimple.html) by LoC
 - [VAULT Schema](https://github.com/cca/vault_schema)
