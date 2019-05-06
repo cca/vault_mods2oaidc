@@ -13,10 +13,16 @@
                 </dc:title>
             </xsl:if>
 
-            <!-- @TODO note & tableOfContents also map here -->
+            <!-- @TODO note fields also map here -->
             <xsl:if test="mods/abstract != ''">
                 <dc:description>
                     <xsl:value-of select="mods/abstract" />
+                </dc:description>
+            </xsl:if>
+
+            <xsl:if test="mods/tableOfContents != ''">
+                <dc:description>Table of Contents:
+                    <xsl:value-of select="mods/tableOfContents" />
                 </dc:description>
             </xsl:if>
 
