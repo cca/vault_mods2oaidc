@@ -14,7 +14,7 @@
       <internetMediaType>image/jpeg</internetMediaType>
     </physicalDescription>
     <language authority="iso639-2b">eng</language>
-    <accessCondition type="use and reproduction">For rights relating to this resource, contact the CCA Libraries.</accessCondition>
+    <accessCondition type="use and reproduction">This content is licensed CC-BY-NC per the terms at https://creativecommons.org/licenses/by-nc/4.0/ . You may not use the material for commercial purposes without permission and must give appropriate credit. Contact the CCA Libraries with questions about licensing or attribution.</accessCondition>
     <recordInfo>
       <recordContentSource authority="oclc">cc9</recordContentSource>
       <recordIdentifier>08d79b0c-392a-412b-8f1e-a15f710a0d38</recordIdentifier>
@@ -112,7 +112,7 @@
     <photoClassification authority="local">Work by students</photoClassification>
     <artstorClassification authority="artstor">photographs</artstorClassification>
     <abstract>CCAC student executed mural, created in 1987 under the direction of CCAC faculty Malaquias Montoya at Willard Junior High 2425 Stewart, Berkeley, CA. Photographed by Bill Newton. </abstract>
-    <tableOfContents>One image, one map, short manuscript.</tableOfContents>
+    <tableOfContents/>
     <noteWrapper>
       <note/>
     </noteWrapper>
@@ -142,6 +142,7 @@
         <uuid>7ee07201-f752-4c86-8aa7-777c45d27634</uuid>
         <file>Willard_mural_1.jpg</file>
         <description>Willard_mural_1.jpg</description>
+        <restricted>false</restricted>
         <thumbnail>_THUMBS/Willard_mural_1.jpg.jpeg</thumbnail>
         <attributes/>
       </attachment>
@@ -151,6 +152,7 @@
         <uuid>bb1ba040-174a-456a-92aa-02b9a4af9775</uuid>
         <file>Willard_mural_2.jpg</file>
         <description>Willard_mural_2.jpg</description>
+        <restricted>false</restricted>
         <thumbnail>_THUMBS/Willard_mural_2.jpg.jpeg</thumbnail>
         <attributes/>
       </attachment>
@@ -160,20 +162,49 @@
         <uuid>732b78fa-1e6b-440c-9cf4-1772cb1efb81</uuid>
         <file>Willard_mural_3.jpg</file>
         <description>Willard_mural_3.jpg</description>
+        <restricted>false</restricted>
         <thumbnail>_THUMBS/Willard_mural_3.jpg.jpeg</thumbnail>
         <attributes/>
       </attachment>
     </attachments>
+    <staging/>
     <name>CCAC off-campus Mural at Willard Junior High School, 1987</name>
     <description>CCAC student executed mural, created in 1987 under the direction of CCAC faculty Malaquias Montoya at Willard Junior High 2425 Stewart, Berkeley, CA. Photographed by Bill Newton. </description>
     <newitem>false</newitem>
     <thumbnail>default</thumbnail>
     <owner>jscarboro<user id="jscarboro"><username>jscarboro</username><givenname>Jennine</givenname><surname>Scarboro</surname><email>jscarboro@cca.edu</email></user></owner>
     <datecreated>2015-09-16T10:16:29-0700</datecreated>
-    <datemodified>2016-01-28T14:25:05-0800</datemodified>
-    <dateforindex>2016-01-28T14:25:05-0800</dateforindex>
+    <datemodified>2016-05-19T11:59:38-0700</datemodified>
+    <dateforindex>2019-02-26T17:07:33-0800</dateforindex>
+    <rating average="-1.0"/>
+    <badurls>
+      <url message="" status="0" tries="0" url="https://creativecommons.org/licenses/by-nc/4.0/"/>
+    </badurls>
+    <history>
+      <clone applies="false" date="2015-09-16T09:49:57-0700" state="draft" user="jscarboro">jscarboro</clone>
+      <contributed applies="false" date="2015-09-16T10:16:29-0700" state="draft" user="jscarboro">jscarboro</contributed>
+      <edit applies="false" date="2015-09-16T10:16:29-0700" state="draft" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-20T09:35:24-0800" state="draft" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-22T12:22:19-0800" state="draft" user="jscarboro">jscarboro</edit>
+      <statechange applies="false" date="2016-01-22T12:22:19-0800" state="live" user="jscarboro">jscarboro</statechange>
+      <edit applies="false" date="2016-01-22T12:30:24-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-22T13:28:34-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-22T13:58:29-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-22T13:59:13-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-26T10:09:41-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-27T09:10:12-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-28T14:21:37-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-28T14:24:03-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-01-28T14:25:05-0800" state="live" user="jscarboro">jscarboro</edit>
+      <edit applies="false" date="2016-05-19T11:59:38-0700" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit>
+    </history>
+    <moderation>
+      <liveapprovaldate>2016-01-22T12:22:19-0800</liveapprovaldate>
+    </moderation>
+    <navigationNodes/>
   </item>
   <template>entity/1454442/displaytemplate/</template>
   <itemdir>/items/08d79b0c-392a-412b-8f1e-a15f710a0d38/1/</itemdir>
+  <sessionparams/>
   <collection>Libraries</collection>
 </xml>
