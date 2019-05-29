@@ -13,7 +13,6 @@
                 </dc:title>
             </xsl:if>
 
-            <!-- @TODO note fields also map here -->
             <xsl:if test="mods/abstract != ''">
                 <dc:description>
                     <xsl:value-of select="mods/abstract" />
@@ -21,9 +20,9 @@
             </xsl:if>
 
             <xsl:if test="mods/tableOfContents != ''">
-                <dc:description>Table of Contents:
+                <dcterms:tableOfContents>
                     <xsl:value-of select="mods/tableOfContents" />
-                </dc:description>
+                </dcterms:tableOfContents>
             </xsl:if>
 
             <!-- use item's URL as identifier, seems to be best practice
@@ -34,12 +33,15 @@
                 <xsl:text>/0/</xsl:text>
             </dc:identifier>
 
-            <!-- @TODO if we don't have dateCreated, what about another date?
-            DC only has one date field for all -->
             <!-- Libraries collection -->
             <xsl:if test="mods/origininfo/dateCreatedWrapper/dateCreated != ''">
                 <dc:date>
                     <xsl:value-of select="mods/origininfo/dateCreatedWrapper/dateCreated" />
+                </dc:date>
+            </xsl:if>
+            <xsl:if test="mods/origininfo/dateOtherWrapper/dateOther != ''">
+                <dc:date>
+                    <xsl:value-of select="mods/origininfo/dateOtherWrapper/dateOther" />
                 </dc:date>
             </xsl:if>
             <!-- Faculty Research -->
@@ -49,7 +51,7 @@
                 </dc:date>
             </xsl:if>
 
-            <!-- @TODO is this the best way to separate creator from contributor? -->
+            <!-- separate creator from contributor -->
             <xsl:for-each select="mods/name[@usage='primary']">
                 <xsl:if test="namePart != ''">
                     <dc:creator>
@@ -215,8 +217,7 @@
                 </xsl:for-each>
             </xsl:for-each>
 
-            <!--
-            for Faculty Research collection
+            <!-- for Faculty Research collection
             must expose the host publication, especially for inclusion in Worldcat
             Libraries collection also uses relatedItem[type=host]
             so we need to check for an ISSN or ISBN -->
@@ -288,6 +289,12 @@
             <xsl:if test="mods/accessCondition != ''">
                 <dc:rights>
                     <xsl:value-of select="mods/accessCondition" />
+                </dc:rights>
+            </xsl:if>
+
+            <xsl:if test="mods/accessCondition/@href != ''">
+                <dc:rights>
+                    <xsl:value-of select="mods/accessCondition/@href" />
                 </dc:rights>
             </xsl:if>
 
