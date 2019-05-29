@@ -14,7 +14,7 @@
       <internetMediaType>image/jpeg</internetMediaType>
     </physicalDescription>
     <language authority="iso639-2b">eng</language>
-    <accessCondition type="use and reproduction">This content is licensed CC-BY-NC per the terms at https://creativecommons.org/licenses/by-nc/4.0/ . You may not use the material for commercial purposes without permission and must give appropriate credit. Contact the CCA Libraries with questions about licensing or attribution.</accessCondition>
+    <accessCondition href="https://creativecommons.org/licenses/by-nc/4.0/" type="use and reproduction">This content is licensed CC-BY-NC per the terms at https://creativecommons.org/licenses/by-nc/4.0/ . You may not use the material for commercial purposes without permission and must give appropriate credit. Contact the CCA Libraries with questions about licensing or attribution.</accessCondition>
     <recordInfo>
       <recordContentSource authority="oclc">cc9</recordContentSource>
       <recordIdentifier>08d79b0c-392a-412b-8f1e-a15f710a0d38</recordIdentifier>
@@ -26,8 +26,6 @@
     <titleInfo type="descriptive" usage="primary">
       <title>CCAC off-campus Mural at Willard Junior High School, 1987</title>
       <subTitle/>
-      <partName/>
-      <partNumber/>
     </titleInfo>
     <origininfo>
       <dateType>dateCreated</dateType>
@@ -42,10 +40,6 @@
     </typeOfResourceWrapper>
     <location>
       <physicalLocation>Born Digital</physicalLocation>
-      <copyInformation>
-        <sublocationDetail/>
-        <shelfLocator/>
-      </copyInformation>
     </location>
     <part>
       <title>Mural detail, showing date completed and the names of muralists</title>
@@ -112,7 +106,7 @@
     <photoClassification authority="local">Work by students</photoClassification>
     <artstorClassification authority="artstor">photographs</artstorClassification>
     <abstract>CCAC student executed mural, created in 1987 under the direction of CCAC faculty Malaquias Montoya at Willard Junior High 2425 Stewart, Berkeley, CA. Photographed by Bill Newton. </abstract>
-    <tableOfContents/>
+    <tableOfContents>1. Photograph 2. Handwritten note</tableOfContents>
     <noteWrapper>
       <note/>
     </noteWrapper>
@@ -183,19 +177,10 @@
     <history>
       <clone applies="false" date="2015-09-16T09:49:57-0700" state="draft" user="jscarboro">jscarboro</clone>
       <contributed applies="false" date="2015-09-16T10:16:29-0700" state="draft" user="jscarboro">jscarboro</contributed>
-      <edit applies="false" date="2015-09-16T10:16:29-0700" state="draft" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-20T09:35:24-0800" state="draft" user="jscarboro">jscarboro</edit>
       <edit applies="false" date="2016-01-22T12:22:19-0800" state="draft" user="jscarboro">jscarboro</edit>
       <statechange applies="false" date="2016-01-22T12:22:19-0800" state="live" user="jscarboro">jscarboro</statechange>
       <edit applies="false" date="2016-01-22T12:30:24-0800" state="live" user="jscarboro">jscarboro</edit>
       <edit applies="false" date="2016-01-22T13:28:34-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-22T13:58:29-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-22T13:59:13-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-26T10:09:41-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-27T09:10:12-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-28T14:21:37-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-28T14:24:03-0800" state="live" user="jscarboro">jscarboro</edit>
-      <edit applies="false" date="2016-01-28T14:25:05-0800" state="live" user="jscarboro">jscarboro</edit>
       <edit applies="false" date="2016-05-19T11:59:38-0700" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit>
     </history>
     <moderation>
