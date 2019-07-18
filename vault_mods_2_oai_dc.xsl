@@ -120,7 +120,7 @@
 
             <!-- typeOfResource maps to dc:type
             We convert our vocabulary to DCMI Type terms, see
-            https://sites.google.com/a/cca.edu/libraries/home/vault/calisphere-dcmi-types -->
+            sites.google.com/a/cca.edu/libraries/home/vault/calisphere-dcmi-types -->
             <xsl:for-each select="mods/typeOfResourceWrapper">
                 <xsl:for-each select="typeOfResource">
                     <!-- caching text in variable makes this faster -->
@@ -144,7 +144,7 @@
                         <xsl:when test="$text = 'still image'">
                             <dc:type>Image</dc:type>
                         </xsl:when>
-                        <!-- this cover 3 values:
+                        <!-- this covers 3 values:
                         sound recording, sound recording-musical, sound recording-nonmusical -->
                         <xsl:when test="starts-with($text, 'sound recording')">
                             <dc:type>Sound</dc:type>
@@ -159,6 +159,13 @@
                     </xsl:choose>
                 </xsl:for-each>
             </xsl:for-each>
+
+            <!-- for Artists' Books collection, Calisphere wants everything to have a "type"
+            working around apostrophe in string, have to use entities for both the wrapping
+            quotes and the apos in the string -->
+            <xsl:if test="mods/physicalDescription/formBroad = &quot;artists&apos; books (books)&quot;">
+                <dc:type>Image</dc:type>
+            </xsl:if>
 
             <!-- specifically for Communications collection
             which sets local/communicationsWrapper/submissionType to one of
