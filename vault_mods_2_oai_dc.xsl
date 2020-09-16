@@ -255,25 +255,37 @@
                     Library and Information Science Research 22(3), 311-338. (2000)
                     for some reason xsl:text is necessary to make the 1st space appear-->
                     <dcterms:bibliographicCitation>
-                        <!-- we'll always have at least a title -->
+                        <!-- we'll always have at least a title in one of these
+                        2 fields (1st Faculty Research, 2nd OA Articles) -->
+                        <xsl:value-of select="title" />
                         <xsl:value-of select="titleInfo/title" />
 
                         <xsl:variable name="volume" select="part/detail[@type='volume']/number" />
                         <xsl:if test="$volume != ''">
-                            <xsl:text> </xsl:text>
+                            <xsl:text> vol. </xsl:text>
                             <xsl:value-of select="$volume" />
                         </xsl:if>
 
-                        <xsl:if test="part/detail[@type='number']/number != ''">
-                            <xsl:text>(</xsl:text>
-                            <xsl:value-of select="part/detail[@type='number']/number" />
-                            <xsl:text>)</xsl:text>
+                        <xsl:variable name="issue" select="part/detail[@type='number']/number" />
+                        <xsl:if test="$issue != ''">
+                            <xsl:variable name="issueCaption" select="part/detail[@type='number']/caption" />
+                            <xsl:choose>
+                                <xsl:when test="$issueCaption != ''">
+                                    <xsl:text> </xsl:text>
+                                    <xsl:value-of select="$issueCaption" />
+                                    <xsl:text> </xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text> no. </xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            <xsl:value-of select="$issue" />
                         </xsl:if>
 
                         <!-- only show comma if we have at least volume & start pg -->
                         <xsl:variable name="start" select="part/extent/start" />
-                        <xsl:if test="$volume != '' and $start != ''">
-                            <xsl:text>, </xsl:text>
+                        <xsl:if test="($volume != '' or $issue != '') and $start != ''">
+                            <xsl:text>, p. </xsl:text>
                         </xsl:if>
                         <xsl:if test="$start != ''">
                             <xsl:value-of select="$start" />
@@ -301,11 +313,11 @@
                     </dcterms:isPartOf>
                 </xsl:if>
 
-                <!-- per Summon Support putting journal title in dc:source
-                is helpful, gets translated to PublicationTitle field.
-                @TODO is this true for book chapters, too? Ask Support. -->
-                <xsl:if test="titleInfo/title != ''">
+                <!-- per Summon Support adding journal or book title to dc:source
+                is helpful, is translated to PublicationTitle field. -->
+                <xsl:if test="title != '' or titleInfo/title != ''">
                     <dc:source>
+                        <xsl:value-of select="title" />
                         <xsl:value-of select="titleInfo/title" />
                     </dc:source>
                 </xsl:if>
