@@ -7,6 +7,9 @@
         <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 
+            <!-- NOTE reference mapping here:
+            https://www.loc.gov/standards/mods/mods-dcsimple.html -->
+
             <xsl:if test="mods/titleInfo/title != ''">
                 <dc:title>
                     <xsl:value-of select="mods/titleInfo/title"/>
@@ -158,6 +161,17 @@
                         <!-- we do not supply an xsl:otherwise fallback -->
                     </xsl:choose>
                 </xsl:for-each>
+            </xsl:for-each>
+
+            <!-- for our more strictly MODS-adherent collections like Open Access
+            Journal Articles. See also mods/genreWrapper/genre -> dc:subject above.
+            MODS genre-> dc:type, NOT subject -->
+            <xsl:for-each select="mods/genre">
+                <xsl:if test="text() != ''">
+                    <dc:type>
+                        <xsl:value-of select="text()" />
+                    </dc:type>
+                </xsl:if>
             </xsl:for-each>
 
             <!-- for Artists' Books collection, Calisphere wants everything to have a "type"
