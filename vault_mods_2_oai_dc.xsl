@@ -250,12 +250,13 @@
                             <xsl:value-of select="identifier" />
                         </dcterms:isPartOf>
                     </xsl:if>
+
                     <!-- fully formatted citation along the lines of
                     Library and Information Science Research 22(3), 311-338. (2000)
                     for some reason xsl:text is necessary to make the 1st space appear-->
                     <dcterms:bibliographicCitation>
                         <!-- we'll always have at least a title -->
-                        <xsl:value-of select="title" />
+                        <xsl:value-of select="titleInfo/title" />
 
                         <xsl:variable name="volume" select="part/detail[@type='volume']/number" />
                         <xsl:if test="$volume != ''">
@@ -298,6 +299,15 @@
                         <xsl:text>urn:ISBN:</xsl:text>
                         <xsl:value-of select="identifier" />
                     </dcterms:isPartOf>
+                </xsl:if>
+
+                <!-- per Summon Support putting journal title in dc:source
+                is helpful, gets translated to PublicationTitle field.
+                @TODO is this true for book chapters, too? Ask Support. -->
+                <xsl:if test="titleInfo/title != ''">
+                    <dc:source>
+                        <xsl:value-of select="titleInfo/title" />
+                    </dc:source>
                 </xsl:if>
             </xsl:for-each>
 
