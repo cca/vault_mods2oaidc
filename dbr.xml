@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <item id="750ef815-09bb-4a52-9e58-6e06aad4a765" itemdefid="c34be1f4-c3ea-47d9-b336-e39ad6e926f4" itemstatus="live" key="13175230" moderating="false" version="5">
+    <rating average="-1.0"/>
+    <attachments/>
+    <staging/>
+    <name>Le Corbusier and media: a dialogue with Jean-Louis Cohen</name>
+    <newitem>false</newitem>
+    <thumbnail>default</thumbnail>
+    <owner>13dc7262-16f0-4b6b-b648-be73d2b7d15f<user id="13dc7262-16f0-4b6b-b648-be73d2b7d15f">
+      <username>eric1</username>
+      <givenname>Eric</givenname>
+      <surname>Phetteplace</surname>
+      <email>ephetteplace@cca.edu</email>
+    </user>
+  </owner>
+  <datecreated>2020-01-27T15:22:17-0800</datecreated>
+  <datemodified>2020-04-13T08:24:53-0700</datemodified>
+  <dateforindex>2020-09-16T16:07:33-0700</dateforindex>
+  <views>48</views>
+  <badurls>
+    <url status="0" tries="0" url="https://babel.hathitrust.org/cgi/pt?id=uva.x001428440&amp;view=1up&amp;seq=21"/>
+  </badurls>
+  <history>
+    <newversion applies="false" date="2020-01-27T15:22:09-0800" state="draft" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</newversion>
+    <contributed applies="false" date="2020-01-27T15:22:17-0800" state="draft" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</contributed>
+    <edit applies="false" date="2020-01-27T15:22:17-0800" state="draft" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit>
+    <statechange applies="false" date="2020-01-27T15:22:17-0800" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</statechange>
+    <edit applies="false" date="2020-04-13T08:24:53-0700" state="live" user="13dc7262-16f0-4b6b-b648-be73d2b7d15f">13dc7262-16f0-4b6b-b648-be73d2b7d15f</edit>
+  </history>
+  <moderation>
+    <liveapprovaldate>2020-01-27T15:22:17-0800</liveapprovaldate>
+  </moderation>
+  <navigationNodes/>
+</item>
+<mods>
+  <genre>journal article</genre>
+  <typeOfResource>text</typeOfResource>
+  <titleInfo>
+    <title>Le Corbusier and media: a dialogue with Jean-Louis Cohen</title>
+  </titleInfo>
+  <location>
+    <url>https://babel.hathitrust.org/cgi/pt?id=uva.x001428440&amp;view=1up&amp;seq=21</url>
+  </location>
+  <typeOfResourceWrapper>
+    <typeOfResource>text</typeOfResource>
+  </typeOfResourceWrapper>
+  <language authority="iso639-2b">
+    <languageTerm authority="iso639-2" type="code">eng</languageTerm>
+  </language>
+  <recordInfo>
+    <recordContentSource authority="oclc">cc9</recordContentSource>
+    <recordIdentifier>750ef815-09bb-4a52-9e58-6e06aad4a765</recordIdentifier>
+    <languageOfCataloging>eng</languageOfCataloging>
+  </recordInfo>
+  <relatedItem type="host">
+    <titleInfo>
+      <title>Design Book Review</title>
+    </titleInfo>
+    <identifier type="issn">0737-5344</identifier>
+    <part>
+      <date>Spring 1988</date>
+      <detail type="number">
+        <number>14</number>
+        <caption>no.</caption>
+      </detail>
+      <extent unit="page">
+        <start>14</start>
+        <end/>
+      </extent>
+    </part>
+  </relatedItem>
+  <name type="personal" usage="primary">
+    <namePart>Cohen, Jean-Louis, 1949-</namePart>
+  </name>
+  <abstract/>
+</mods>
+<local>
+  <HathiTrust>
+    <identifier>uva.x001428440</identifier>
+    <issueStartPage>7</issueStartPage>
+    <articleStartPage>20</articleStartPage>
+  </HathiTrust>
+</local>
+<template>entity/12994829/displaytemplate/</template>
+<itemdir>/items/750ef815-09bb-4a52-9e58-6e06aad4a765/5/</itemdir>
+<sessionparams/>
+<collection>Open Access Journal Articles</collection>
+</xml>

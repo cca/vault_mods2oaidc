@@ -1,5 +1,6 @@
 *.xml
 *.dc
-!libraries.xml
 !article.xml
 !book-chapter.xml
+!dbr.xml
+!libraries.xml
