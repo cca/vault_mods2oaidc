@@ -47,6 +47,12 @@
                     <xsl:value-of select="mods/origininfo/dateOtherWrapper/dateOther" />
                 </dc:date>
             </xsl:if>
+            <!-- date range, use only pointStart, see issue#5 -->
+            <xsl:if test="mods/origininfo/dateCreatedWrapper/pointStart != ''">
+                <dc:date>
+                    <xsl:value-of select="mods/origininfo/dateCreatedWrapper/pointStart" />
+                </dc:date>
+            </xsl:if>
             <!-- Faculty Research -->
             <xsl:if test="mods/relatedItem/part/date != ''">
                 <dc:date>
