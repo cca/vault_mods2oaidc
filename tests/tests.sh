@@ -16,3 +16,4 @@ runtest () {
 }
 
 runtest datewrapper
+runtest thesis

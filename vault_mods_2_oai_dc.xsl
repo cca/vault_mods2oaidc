@@ -169,6 +169,12 @@
                 </xsl:for-each>
             </xsl:for-each>
 
+            <!-- matches() function didn't work, don't know if there's an easier
+            way to do a case-insensitive match of plural & singular -->
+            <xsl:if test="local/courseWorkWrapper/courseWorkType = 'Thesis' or local/courseWorkWrapper/courseWorkType = 'thesis' or local/courseWorkWrapper/courseWorkType = 'Theses' or local/courseWorkWrapper/courseWorkType = 'theses'">
+                <dc:type>Dissertation/Thesis</dc:type>
+            </xsl:if>
+
             <!-- for our more strictly MODS-adherent collections like Open Access
             Journal Articles. See also mods/genreWrapper/genre -> dc:subject above.
             MODS genre-> dc:type, NOT subject -->
